@@ -1,0 +1,893 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Morgan - Cloud & Cybersecurity Expert</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #1a2a6c, #2a4858);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: scale(1.03);
+        }
+        
+        .expertise-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .expertise-card:hover .expertise-icon {
+            transform: scale(1.2);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #4F46E5;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .scroll-top {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 99;
+            transition: all 0.3s ease;
+        }
+        
+        .scroll-top:hover {
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-indigo-600">Alex<span class="text-gray-800">Secure</span></a>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link text-gray-700 hover:text-indigo-600 transition">Home</a>
+                <a href="#expertise" class="nav-link text-gray-700 hover:text-indigo-600 transition">Expertise</a>
+                <a href="#services" class="nav-link text-gray-700 hover:text-indigo-600 transition">Services</a>
+                <a href="#experience" class="nav-link text-gray-700 hover:text-indigo-600 transition">Experience</a>
+                <a href="#certifications" class="nav-link text-gray-700 hover:text-indigo-600 transition">Certifications</a>
+                <a href="#testimonials" class="nav-link text-gray-700 hover:text-indigo-600 transition">Testimonials</a>
+                <a href="#contact" class="nav-link text-gray-700 hover:text-indigo-600 transition">Contact</a>
+            </div>
+            
+            <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+            <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+                <a href="#home" class="text-gray-700 hover:text-indigo-600 transition">Home</a>
+                <a href="#expertise" class="text-gray-700 hover:text-indigo-600 transition">Expertise</a>
+                <a href="#services" class="text-gray-700 hover:text-indigo-600 transition">Services</a>
+                <a href="#experience" class="text-gray-700 hover:text-indigo-600 transition">Experience</a>
+                <a href="#certifications" class="text-gray-700 hover:text-indigo-600 transition">Certifications</a>
+                <a href="#testimonials" class="text-gray-700 hover:text-indigo-600 transition">Testimonials</a>
+                <a href="#contact" class="text-gray-700 hover:text-indigo-600 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg pt-28 pb-20 md:pt-32 md:pb-24">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold text-white leading-tight mb-4">Securing Your Digital Future</h1>
+                <p class="text-xl text-gray-200 mb-8">Expert cloud solutions and cybersecurity services to protect your business in an evolving threat landscape.</p>
+                <div class="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#contact" class="bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3 px-6 rounded-lg transition duration-300 text-center">Get in Touch</a>
+                    <a href="#services" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-indigo-600 font-medium py-3 px-6 rounded-lg transition duration-300 text-center">View Services</a>
+                </div>
+            </div>
+            <div class="md:w-1/2">
+                <svg class="w-full max-w-lg mx-auto" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#4F46E5;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#818CF8;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <rect x="200" y="100" width="400" height="300" rx="20" fill="#ffffff" opacity="0.1" />
+                    <circle cx="400" cy="250" r="150" fill="url(#grad1)" opacity="0.2" />
+                    <path d="M400,150 L450,250 L400,350 L350,250 Z" fill="#ffffff" />
+                    <circle cx="400" cy="250" r="50" fill="#ffffff" opacity="0.6" />
+                    <path d="M320,180 C320,180 350,150 400,150 C450,150 480,180 480,180" stroke="#ffffff" stroke-width="8" fill="none" />
+                    <path d="M320,320 C320,320 350,350 400,350 C450,350 480,320 480,320" stroke="#ffffff" stroke-width="8" fill="none" />
+                    <circle cx="320" cy="180" r="15" fill="#ffffff" />
+                    <circle cx="480" cy="180" r="15" fill="#ffffff" />
+                    <circle cx="320" cy="320" r="15" fill="#ffffff" />
+                    <circle cx="480" cy="320" r="15" fill="#ffffff" />
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Expertise Section -->
+    <section id="expertise" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Core Expertise</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Specialized knowledge and skills in the most critical areas of modern cybersecurity and cloud infrastructure.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="expertise-card bg-white rounded-xl shadow-lg p-8 border border-gray-100 hover:border-indigo-200 transition duration-300">
+                    <div class="expertise-icon bg-indigo-100 text-indigo-600 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-cloud text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">Cloud Security Architecture</h3>
+                    <p class="text-gray-600 text-center">Designing secure cloud environments across AWS, Azure, and GCP with defense-in-depth strategies.</p>
+                </div>
+                
+                <div class="expertise-card bg-white rounded-xl shadow-lg p-8 border border-gray-100 hover:border-indigo-200 transition duration-300">
+                    <div class="expertise-icon bg-indigo-100 text-indigo-600 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-shield-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">Threat Detection & Response</h3>
+                    <p class="text-gray-600 text-center">Advanced threat hunting and incident response capabilities to identify and neutralize security breaches.</p>
+                </div>
+                
+                <div class="expertise-card bg-white rounded-xl shadow-lg p-8 border border-gray-100 hover:border-indigo-200 transition duration-300">
+                    <div class="expertise-icon bg-indigo-100 text-indigo-600 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-code-branch text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">DevSecOps Implementation</h3>
+                    <p class="text-gray-600 text-center">Integrating security throughout the development lifecycle with automated testing and continuous monitoring.</p>
+                </div>
+                
+                <div class="expertise-card bg-white rounded-xl shadow-lg p-8 border border-gray-100 hover:border-indigo-200 transition duration-300">
+                    <div class="expertise-icon bg-indigo-100 text-indigo-600 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-lock text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">Zero Trust Architecture</h3>
+                    <p class="text-gray-600 text-center">Implementing "never trust, always verify" principles across network, data, and application layers.</p>
+                </div>
+                
+                <div class="expertise-card bg-white rounded-xl shadow-lg p-8 border border-gray-100 hover:border-indigo-200 transition duration-300">
+                    <div class="expertise-icon bg-indigo-100 text-indigo-600 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-file-contract text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">Compliance & Governance</h3>
+                    <p class="text-gray-600 text-center">Ensuring adherence to regulatory frameworks including GDPR, HIPAA, PCI DSS, and industry standards.</p>
+                </div>
+                
+                <div class="expertise-card bg-white rounded-xl shadow-lg p-8 border border-gray-100 hover:border-indigo-200 transition duration-300">
+                    <div class="expertise-icon bg-indigo-100 text-indigo-600 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-user-shield text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">Identity & Access Management</h3>
+                    <p class="text-gray-600 text-center">Designing robust IAM solutions with multi-factor authentication and least privilege principles.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">My Services</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Comprehensive cybersecurity and cloud solutions tailored to your organization's specific needs.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden transition duration-300">
+                    <div class="h-3 bg-indigo-600"></div>
+                    <div class="p-8">
+                        <div class="bg-indigo-100 text-indigo-600 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-search text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Security Assessment</h3>
+                        <p class="text-gray-600 mb-6">Comprehensive evaluation of your security posture including vulnerability scanning, penetration testing, and gap analysis.</p>
+                        <ul class="text-gray-600 space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Vulnerability Assessment</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Penetration Testing</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Security Gap Analysis</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden transition duration-300">
+                    <div class="h-3 bg-indigo-600"></div>
+                    <div class="p-8">
+                        <div class="bg-indigo-100 text-indigo-600 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-cloud text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Cloud Security Implementation</h3>
+                        <p class="text-gray-600 mb-6">Secure cloud architecture design and implementation with continuous monitoring and automated security controls.</p>
+                        <ul class="text-gray-600 space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Secure Architecture Design</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Cloud Security Controls</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Continuous Monitoring</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden transition duration-300">
+                    <div class="h-3 bg-indigo-600"></div>
+                    <div class="p-8">
+                        <div class="bg-indigo-100 text-indigo-600 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-laptop-code text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Security Strategy & Roadmap</h3>
+                        <p class="text-gray-600 mb-6">Development of comprehensive security strategies aligned with business objectives and industry best practices.</p>
+                        <ul class="text-gray-600 space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Security Program Development</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Risk Management Framework</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Security Roadmap Planning</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden transition duration-300">
+                    <div class="h-3 bg-indigo-600"></div>
+                    <div class="p-8">
+                        <div class="bg-indigo-100 text-indigo-600 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-shield-virus text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Incident Response</h3>
+                        <p class="text-gray-600 mb-6">Rapid response to security incidents with thorough investigation, containment, and recovery procedures.</p>
+                        <ul class="text-gray-600 space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Incident Investigation</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Threat Containment</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Recovery Planning</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden transition duration-300">
+                    <div class="h-3 bg-indigo-600"></div>
+                    <div class="p-8">
+                        <div class="bg-indigo-100 text-indigo-600 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-graduation-cap text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Security Training</h3>
+                        <p class="text-gray-600 mb-6">Customized security awareness and technical training programs for employees and security teams.</p>
+                        <ul class="text-gray-600 space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Security Awareness Programs</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Technical Security Training</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Phishing Simulations</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-card bg-white rounded-xl shadow-lg overflow-hidden transition duration-300">
+                    <div class="h-3 bg-indigo-600"></div>
+                    <div class="p-8">
+                        <div class="bg-indigo-100 text-indigo-600 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-file-alt text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Compliance Advisory</h3>
+                        <p class="text-gray-600 mb-6">Expert guidance on meeting regulatory requirements and industry standards for security and privacy.</p>
+                        <ul class="text-gray-600 space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Regulatory Compliance</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Security Framework Implementation</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Compliance Audits</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Experience Section -->
+    <section id="experience" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Work Experience</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Over a decade of hands-on experience securing enterprise environments and cloud infrastructure.</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="relative">
+                    <!-- Timeline Line -->
+                    <div class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 h-full w-1 bg-indigo-200"></div>
+                    
+                    <!-- Experience Item 1 -->
+                    <div class="relative mb-16">
+                        <div class="flex flex-col md:flex-row items-center">
+                            <div class="md:w-1/2 md:pr-12 md:text-right mb-8 md:mb-0">
+                                <h3 class="text-xl font-semibold text-gray-800">Senior Cloud Security Architect</h3>
+                                <p class="text-indigo-600 font-medium">Global Financial Services Inc.</p>
+                                <p class="text-gray-500">2020 - Present</p>
+                            </div>
+                            
+                            <div class="absolute left-0 md:left-1/2 transform -translate-y-1/2 md:-translate-x-1/2 bg-indigo-600 border-4 border-white rounded-full w-6 h-6 z-10"></div>
+                            
+                            <div class="md:w-1/2 md:pl-12">
+                                <ul class="text-gray-600 space-y-2">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-angle-right text-indigo-600 mt-1 mr-2"></i>
+                                        <span>Led cloud security strategy for multi-cloud environment (AWS, Azure, GCP)</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-angle-right text-indigo-600 mt-1 mr-2"></i>
+                                        <span>Implemented Zero Trust architecture reducing security incidents by 65%</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-angle-right text-indigo-600 mt-1 mr-2"></i>
+                                        <span>Established DevSecOps practices across 12 development teams</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Experience Item 2 -->
+                    <div class="relative mb-16">
+                        <div class="flex flex-col md:flex-row items-center">
+                            <div class="md:w-1/2 md:pr-12 md:text-right mb-8 md:mb-0 md:order-1">
+                                <ul class="text-gray-600 space-y-2">
+                                    <li class="flex items-start md:justify-end">
+                                        <span class="md:order-2">Managed security operations for 200+ cloud workloads</span>
+                                        <i class="fas fa-angle-right text-indigo-600 mt-1 mr-2 md:hidden"></i>
+                                        <i class="fas fa-angle-left text-indigo-600 mt-1 ml-2 hidden md:block"></i>
+                                    </li>
+                                    <li class="flex items-start md:justify-end">
+                                        <span class="md:order-2">Designed and implemented cloud security monitoring solution</span>
+                                        <i class="fas fa-angle-right text-indigo-600 mt-1 mr-2 md:hidden"></i>
+                                        <i class="fas fa-angle-left text-indigo-600 mt-1 ml-2 hidden md:block"></i>
+                                    </li>
+                                    <li class="flex items-start md:justify-end">
+                                        <span class="md:order-2">Led incident response for major security events</span>
+                                        <i class="fas fa-angle-right text-indigo-600 mt-1 mr-2 md:hidden"></i>
+                                        <i class="fas fa-angle-left text-indigo-600 mt-1 ml-2 hidden md:block"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="absolute left-0 md:left-1/2 transform -translate-y-1/2 md:-translate-x-1/2 bg-indigo-600 border-4 border-white rounded-full w-6 h-6 z-10"></div>
+                            
+                            <div class="md:w-1/2 md:pl-12 md:order-2">
+                                <h3 class="text-xl font-semibold text-gray-800">Cloud Security Engineer</h3>
+                                <p class="text-indigo-600 font-medium">TechSecure Solutions</p>
+                                <p class="text-gray-500">2017 - 2020</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Experience Item 3 -->
+                    <div class="relative">
+                        <div class="flex flex-col md:flex-row items-center">
+                            <div class="md:w-1/2 md:pr-12 md:text-right mb-8 md:mb-0">
+                                <h3 class="text-xl font-semibold text-gray-800">Cybersecurity Analyst</h3>
+                                <p class="text-indigo-600 font-medium">Secure Networks Inc.</p>
+                                <p class="text-gray-500">2014 - 2017</p>
+                            </div>
+                            
+                            <div class="absolute left-0 md:left-1/2 transform -translate-y-1/2 md:-translate-x-1/2 bg-indigo-600 border-4 border-white rounded-full w-6 h-6 z-10"></div>
+                            
+                            <div class="md:w-1/2 md:pl-12">
+                                <ul class="text-gray-600 space-y-2">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-angle-right text-indigo-600 mt-1 mr-2"></i>
+                                        <span>Performed vulnerability assessments and penetration testing</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-angle-right text-indigo-600 mt-1 mr-2"></i>
+                                        <span>Developed security policies and procedures</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-angle-right text-indigo-600 mt-1 mr-2"></i>
+                                        <span>Conducted security awareness training for 500+ employees</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Certifications & Training</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Industry-recognized credentials validating expertise in cybersecurity and cloud technologies.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl shadow-lg p-8 border border-gray-100">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-indigo-100 text-indigo-600 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-certificate text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">CISSP</h3>
+                    </div>
+                    <p class="text-gray-600">Certified Information Systems Security Professional</p>
+                    <p class="text-gray-500 mt-2">ISC² - 2016</p>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg p-8 border border-gray-100">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-indigo-100 text-indigo-600 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-certificate text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">CCSP</h3>
+                    </div>
+                    <p class="text-gray-600">Certified Cloud Security Professional</p>
+                    <p class="text-gray-500 mt-2">ISC² - 2018</p>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg p-8 border border-gray-100">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-indigo-100 text-indigo-600 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-certificate text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">AWS Security Specialty</h3>
+                    </div>
+                    <p class="text-gray-600">AWS Certified Security - Specialty</p>
+                    <p class="text-gray-500 mt-2">Amazon Web Services - 2019</p>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg p-8 border border-gray-100">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-indigo-100 text-indigo-600 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-certificate text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">Azure Security Engineer</h3>
+                    </div>
+                    <p class="text-gray-600">Microsoft Certified: Azure Security Engineer Associate</p>
+                    <p class="text-gray-500 mt-2">Microsoft - 2020</p>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg p-8 border border-gray-100">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-indigo-100 text-indigo-600 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-certificate text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">CISM</h3>
+                    </div>
+                    <p class="text-gray-600">Certified Information Security Manager</p>
+                    <p class="text-gray-500 mt-2">ISACA - 2021</p>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg p-8 border border-gray-100">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-indigo-100 text-indigo-600 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-certificate text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">GCP Professional Security</h3>
+                    </div>
+                    <p class="text-gray-600">Google Cloud Professional Cloud Security Engineer</p>
+                    <p class="text-gray-500 mt-2">Google Cloud - 2022</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Hire Me Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Why Hire Me?</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">What sets me apart as your cybersecurity and cloud security partner.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white rounded-xl shadow-lg p-8 border border-gray-100 hover:border-indigo-200 transition duration-300">
+                    <div class="bg-indigo-100 text-indigo-600 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-brain text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">Deep Expertise</h3>
+                    <p class="text-gray-600 text-center">Over 10 years of specialized experience in cloud security and cybersecurity across multiple industries.</p>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg p-8 border border-gray-100 hover:border-indigo-200 transition duration-300">
+                    <div class="bg-indigo-100 text-indigo-600 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-project-diagram text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">Holistic Approach</h3>
+                    <p class="text-gray-600 text-center">Addressing security from all angles: people, processes, and technology for comprehensive protection.</p>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg p-8 border border-gray-100 hover:border-indigo-200 transition duration-300">
+                    <div class="bg-indigo-100 text-indigo-600 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-chart-line text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">Business Alignment</h3>
+                    <p class="text-gray-600 text-center">Security solutions that enable business objectives rather than hindering them, balancing security with usability.</p>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg p-8 border border-gray-100 hover:border-indigo-200 transition duration-300">
+                    <div class="bg-indigo-100 text-indigo-600 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-sync-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">Continuous Learning</h3>
+                    <p class="text-gray-600 text-center">Staying ahead of emerging threats and technologies through ongoing education and research.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Client Testimonials</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">What clients say about working with me on their security challenges.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="testimonial-card bg-white rounded-xl shadow-lg p-8 border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <div class="text-yellow-400 flex">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic mb-6">"Alex transformed our cloud security posture. We went from reactive to proactive, and the implementation of Zero Trust principles has significantly reduced our attack surface."</p>
+                    <div class="flex items-center">
+                        <div class="bg-indigo-100 text-indigo-600 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                            <span class="font-semibold">JD</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Jennifer Davis</h4>
+                            <p class="text-gray-500">CIO, FinTech Innovations</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card bg-white rounded-xl shadow-lg p-8 border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <div class="text-yellow-400 flex">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic mb-6">"The security assessment Alex conducted was thorough and eye-opening. The remediation roadmap was practical and helped us prioritize our security investments effectively."</p>
+                    <div class="flex items-center">
+                        <div class="bg-indigo-100 text-indigo-600 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                            <span class="font-semibold">MR</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Michael Rodriguez</h4>
+                            <p class="text-gray-500">CISO, Healthcare Systems</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card bg-white rounded-xl shadow-lg p-8 border border-gray-100">
+                    <div class="flex items-center mb-6">
+                        <div class="text-yellow-400 flex">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic mb-6">"Alex's expertise in cloud security architecture was instrumental in our successful cloud migration. The security controls implemented have given us confidence in our multi-cloud strategy."</p>
+                    <div class="flex items-center">
+                        <div class="bg-indigo-100 text-indigo-600 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                            <span class="font-semibold">SP</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Sarah Patel</h4>
+                            <p class="text-gray-500">VP of Technology, E-commerce Giant</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Get in Touch</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Ready to enhance your security posture? Let's discuss how I can help protect your digital assets.</p>
+            </div>
+            
+            <div class="max-w-5xl mx-auto flex flex-col md:flex-row">
+                <div class="md:w-1/2 md:pr-8 mb-10 md:mb-0">
+                    <div class="bg-indigo-600 text-white rounded-xl p-8 h-full">
+                        <h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-indigo-500 rounded-full p-3 mr-4">
+                                    <i class="fas fa-envelope text-white"></i>
+                                </div>
+                                <div>
+                                    <p class="text-indigo-200 mb-1">Email</p>
+                                    <p class="font-medium">alex@cybersecurityexpert.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-indigo-500 rounded-full p-3 mr-4">
+                                    <i class="fas fa-phone text-white"></i>
+                                </div>
+                                <div>
+                                    <p class="text-indigo-200 mb-1">Phone</p>
+                                    <p class="font-medium">+1 (555) 123-4567</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-indigo-500 rounded-full p-3 mr-4">
+                                    <i class="fas fa-map-marker-alt text-white"></i>
+                                </div>
+                                <div>
+                                    <p class="text-indigo-200 mb-1">Location</p>
+                                    <p class="font-medium">San Francisco, CA</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-10">
+                            <h4 class="text-xl font-semibold mb-4">Connect</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="bg-white text-indigo-600 rounded-full p-3 hover:bg-indigo-100 transition">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="bg-white text-indigo-600 rounded-full p-3 hover:bg-indigo-100 transition">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="bg-white text-indigo-600 rounded-full p-3 hover:bg-indigo-100 transition">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2 md:pl-8">
+                    <div class="bg-white rounded-xl shadow-lg p-8 border border-gray-100">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-6">Send a Message</h3>
+                        
+                        <form id="contact-form" class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-gray-700 mb-2">Full Name</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Your name">
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block text-gray-700 mb-2">Email Address</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="your@email.com">
+                            </div>
+                            
+                            <div>
+                                <label for="subject" class="block text-gray-700 mb-2">Subject</label>
+                                <input type="text" id="subject" name="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="How can I help you?">
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-gray-700 mb-2">Message</label>
+                                <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Your message..."></textarea>
+                            </div>
+                            
+                            <div>
+                                <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3 px-6 rounded-lg transition duration-300">Send Message</button>
+                            </div>
+                        </form>
+                        
+                        <div id="form-message" class="mt-4 text-center hidden">
+                            <p class="text-green-600 font-medium">Thank you! Your message has been sent successfully.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="#" class="text-2xl font-bold">Alex<span class="text-indigo-400">Secure</span></a>
+                    <p class="text-gray-400 mt-2">Securing your digital future.</p>
+                </div>
+                
+                <div class="flex flex-wrap justify-center space-x-8">
+                    <a href="#home" class="text-gray-300 hover:text-white transition mb-4">Home</a>
+                    <a href="#expertise" class="text-gray-300 hover:text-white transition mb-4">Expertise</a>
+                    <a href="#services" class="text-gray-300 hover:text-white transition mb-4">Services</a>
+                    <a href="#experience" class="text-gray-300 hover:text-white transition mb-4">Experience</a>
+                    <a href="#certifications" class="text-gray-300 hover:text-white transition mb-4">Certifications</a>
+                    <a href="#testimonials" class="text-gray-300 hover:text-white transition mb-4">Testimonials</a>
+                    <a href="#contact" class="text-gray-300 hover:text-white transition mb-4">Contact</a>
+                </div>
+            </div>
+            
+            <hr class="border-gray-800 my-8">
+            
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">&copy; 2023 AlexSecure. All rights reserved.</p>
+                
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-top-btn" class="scroll-top bg-indigo-600 hover:bg-indigo-700 text-white rounded-full p-3 shadow-lg">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+        
+        // Scroll to Top Button
+        const scrollTopBtn = document.getElementById('scroll-top-btn');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.style.display = 'block';
+            } else {
+                scrollTopBtn.style.display = 'none';
+            }
+        });
+        
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Form Submission (Demo)
+        const contactForm = document.getElementById('contact-form');
+        const formMessage = document.getElementById('form-message');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // In a real implementation, you would send the form data to a server
+            // This is just a demo to show the success message
+            formMessage.classList.remove('hidden');
+            contactForm.reset();
+            
+            // Hide the success message after 5 seconds
+            setTimeout(() => {
+                formMessage.classList.add('hidden');
+            }, 5000);
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93c19692e6edba59',t:'MTc0NjYzMDA0MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
