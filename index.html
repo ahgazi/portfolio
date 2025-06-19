@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AH Gazi | Multi-Cloud & Cybersecurity Expert</title>
+    <title>AH Gazi | Multi-cloud and Security Specialist</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -45,6 +45,49 @@
                 opacity: 0.7;
             }
         }
+
+        /* Certification badge hover */
+        .cert-badge {
+            transition: all 0.3s ease;
+        }
+        
+        .cert-badge:hover {
+            transform: scale(1.05);
+        }
+
+        /* Tooltip styles */
+        .tooltip {
+            position: relative;
+        }
+        
+        .tooltip .tooltip-text {
+            visibility: hidden;
+            width: 200px;
+            background-color: #172554;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 8px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -100px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-size: 0.75rem; /* Reduced font size (12px) */
+        }
+
+        .dark .tooltip .tooltip-text {
+            background-color: #f1f5f9;
+            color: #172554;
+        }
+
+        
+        .tooltip:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
         
         .security-icon {
             transition: all 0.3s ease;
@@ -77,147 +120,7 @@
         .active::after {
             width: 100%;
         }
-    </style>
 
- <!-- New Style --> 
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth;
-        }
-        
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Poppins', sans-serif;
-        }
-        
-
-        
-        .card-hover:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.1);
-        }
-        
-        .service-card {
-            transition: all 0.3s ease;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-8px);
-        }
-        
-        .service-icon {
-            transition: all 0.3s ease;
-        }
-        
-        .service-card:hover .service-icon {
-            transform: scale(1.1);
-        }
-        
-        .testimonial-card {
-            transition: all 0.3s ease;
-        }
-        
-        .testimonial-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .nav-link {
-            position: relative;
-        }
-        
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -4px;
-            left: 0;
-            background-color: #3b82f6;
-            transition: width 0.3s ease;
-        }
-        
-        .nav-link:hover::after {
-            width: 100%;
-        }
-        
-        .active::after {
-            width: 100%;
-        }
-        
-        .security-pulse {
-            position: relative;
-        }
-        
-        .security-pulse::before {
-            content: '';
-            position: absolute;
-            border: 3px solid #3b82f6;
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            animation: pulse 2s ease-out infinite;
-            opacity: 0;
-            z-index: -1;
-        }
-        
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-                opacity: 0.8;
-            }
-            100% {
-                transform: scale(1.5);
-                opacity: 0;
-            }
-        }
-        
-        .blog-card {
-            transition: all 0.3s ease;
-        }
-        
-        .blog-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .contact-input:focus {
-            border-color: #3b82f6;
-            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
-        }
-        
-        .experience-card {
-            transition: all 0.3s ease;
-        }
-        
-        .experience-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .cert-card {
-            transition: all 0.3s ease;
-        }
-        
-        .cert-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-        }
-        
-        .timeline-container {
-            position: relative;
-        }
-        
-        .timeline-container::before {
-            content: '';
-            position: absolute;
-            width: 2px;
-            background-color: #e2e8f0;
-            top: 0;
-            bottom: 0;
-            left: 24px;
-            margin-left: -1px;
-        }
-        
         .timeline-dot {
             position: absolute;
             width: 16px;
@@ -290,18 +193,92 @@
     <section id="home" class="pt-24 pb-16 md:pt-32 md:pb-24 gradient-bg">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex flex-col md:flex-row items-center">
-            <div class="md:w-1/2 text-center md:text-left text-white">
-                <h1 class="text-4xl md:text-5xl font-bold mb-4">Future-Ready <span class="text-blue-400">Cloud <br> </span> and <span class="text-blue-400"> Security</span> Solutions.</h1>
-                <p class="text-lg md:text-xl text-blue-100 mb-8">Protecting your digital growth with scalable cloud infrastructure and cutting-edge security.</p>
-                <div class="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
-                    <a href="#contact" class="px-6 py-3 bg-white text-blue-800 font-medium rounded-md hover:bg-blue-50 transition-colors">Get in Touch</a>
-                    <a href="#expertise" class="px-6 py-3 border border-white text-white font-medium rounded-md hover:bg-white hover:bg-opacity-10 transition-colors">View Expertise</a>
-                </div>
-            </div>
-            <div class="md:w-1/2 mt-12 md:mt-0 flex justify-end">
-                <div class="relative group">
+        <div class="md:w-1/2 text-center md:text-left text-white">
 
-            <!-- Spinning Shield Border --> 
+            <!-- Heading -->
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">
+            I'm <span class="text-blue-500">AH Gazi</span>,<br>
+            Cloud and Security Specialist.
+            </h1>
+
+            <!-- Paragraph -->
+            <p class="text-lg md:text-xl text-blue-200 mb-8 leading-relaxed">
+            Certified cloud and security architect specializing in multi-cloud solutions, SOC management, DevOps automation, and IT infrastructure optimization. <br>
+            </p>
+
+             <!-- Certification Badges -->
+
+            <div class="flex flex-wrap gap-2 mb-8">
+
+                            <div class="tooltip cert-badge">
+            <img src="/Associate Cloud Engineer Certification.png" class="h-14 w-14 object-contain security-icon">
+            <span class="tooltip-text">Google Associate Cloud Engineer </span>
+            </div>
+            <div class="tooltip cert-badge">
+            <img src="/AWS Certified Solutions Architect – Associate.png" class="h-14 w-14 object-contain security-icon">
+            <span class="tooltip-text">AWS Certified Solutions Architect – Associate</span>
+            </div>
+
+            <div class="tooltip cert-badge">
+            <img src="/Microsoft Certified- Cybersecurity Architect Expert.png" class="h-14 w-14 object-contain security-icon">
+            <span class="tooltip-text">Microsoft Certified: Cybersecurity Architect Expert</span>
+            </div>
+
+            <div class="tooltip cert-badge">
+            <img src="/Microsoft Certified- DevOps Engineer Expert.png" class="h-14 w-14 object-contain security-icon">
+            <span class="tooltip-text">Microsoft Certified: DevOps Engineer Expert</span>
+            </div>
+
+            <div class="tooltip cert-badge">
+            <img src="/Microsoft 365 Certified- Enterprise Administrator Expert.png" class="h-14 w-14 object-contain security-icon">
+            <span class="tooltip-text">Microsoft 365 Certified: Enterprise Administrator Expert</span>
+            </div>
+
+            <div class="tooltip cert-badge">
+            <img src="/Microsoft Certified Azure Administrator Associate.png" class="h-14 w-14 object-contain security-icon">
+            <span class="tooltip-text">Microsoft Certified: Azure Administrator Associate</span>
+            </div>
+
+            <div class="tooltip cert-badge">
+            <img src="/Microsoft Certified Identity and Access Administrator Associate.png" class="h-14 w-14 object-contain security-icon">
+            <span class="tooltip-text">Microsoft Certified: Identity and Access Administrator Associate</span>
+            </div>
+            <div class="tooltip cert-badge">
+            <img src="/Microsoft Certified Security, Compliance, and Identity Fundamentals.png" class="h-14 w-14 object-contain security-icon">
+            <span class="tooltip-text">Microsoft Certified: Security, Compliance, and Identity Fundamentals</span>
+            </div>
+            <div class="tooltip cert-badge">
+            <img src="/Microsoft Certified- Azure Fundamentals.png" class="h-14 w-14 object-contain security-icon">
+            <span class="tooltip-text">Microsoft Certified: Azure Fundamentals</span>
+            </div>
+            </div>
+
+            <!-- Buttons -->
+            <div class="flex flex-col sm:flex-row justify-center md:justify-start space-y-3 sm:space-y-0 sm:space-x-3">
+                <!-- Get in Touch Button (Secondary) -->
+                <a href="#contact"
+                class="flex items-center justify-center px-5 py-2 text-sm font-semibold rounded-lg shadow-lg border-2 
+                bg-white bg-gradient-to-br text-blue-800 hover:from-blue-800 hover:to-blue-500 hover:text-white">
+                    Get in Touch
+                </a>
+
+                <!-- View Expertise Button (Primary) -->
+                <a href="#expertise"
+                class="flex items-center justify-center px-5 py-2 text-sm font-semibold rounded-lg shadow-lg border-2 
+                bg-gradient-to-br text-white hover:from-blue-800 hover:to-blue-500">
+                    View Expertise
+                </a>
+            </div>
+
+
+
+        </div>
+
+        <!-- Right side with spinning shield and icon -->
+        <div class="md:w-1/2 mt-12 md:mt-0 flex justify-end">
+            <div class="relative group">
+
+            <!-- Spinning Shield Border -->
             <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center">
                 <div class="shield w-72 h-72 md:w-80 md:h-80 rounded-full border-4 border-blue-400 border-opacity-80 border-dotted animate-spin-slow"></div>
             </div>
@@ -309,43 +286,42 @@
             <!-- SVG Icon with Hover Green Color -->
             <div class="w-72 h-72 md:w-80 md:h-80 rounded-full bg-blue-900 bg-opacity-50 flex items-center justify-center">
                 <svg class="w-40 h-40 md:w-48 md:h-48 text-white animate-pulse-slow group-hover:text-green-500 transition-all duration-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
             </div>
 
+            <style>
+                @keyframes spin-slow {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+                }
 
-                    <style>
-                        @keyframes spin-slow {
-                            0% {
-                                transform: rotate(0deg);
-                            }
-                            100% {
-                                transform: rotate(360deg);
-                            }
-                        }
+                /* Basic spinning animation */
+                .shield {
+                animation: spin-slow 20s linear infinite;
+                transition: all 0.4s ease-in-out;
+                }
 
-                        /* Basic spinning animation */
-                        .shield {
-                            animation: spin-slow 20s linear infinite;
-                            transition: all 0.4s ease-in-out;
-                        }
+                /* Hover effect for spinning shield */
+                .shield:hover {
+                animation-play-state: paused;
+                transform: scale(1.1);
+                border-color: #0F9D58; /* Green border color on hover */
+                box-shadow: 0 0 30px rgba(15, 157, 88, 0.4), 0 0 60px rgba(15, 157, 88, 0.2);
+                }
 
-                        /* Hover effect for spinning shield */
-                        .shield:hover {
-                            animation-play-state: paused;
-                            transform: scale(1.1);
-                            border-color: #0F9D58; /* Green border color on hover */
-                            box-shadow: 0 0 30px rgba(15, 157, 88, 0.4), 0 0 60px rgba(15, 157, 88, 0.2);
-                        }
-
-                        /* Hover effect for SVG icon */
-                        .group:hover svg {
-                            transform: scale(1.1);
-                            color: #0F9D58; /* Green color for icon */
-                        }
-                    </style>
-                </div>
+                /* Hover effect for SVG icon */
+                .group:hover svg {
+                transform: scale(1.1);
+                color: #0F9D58; /* Green color for icon */
+                }
+            </style>
             </div>
+        </div>
         </div>
     </div>
     </section>
@@ -379,7 +355,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex flex-col md:flex-row items-start">
             <!-- Profile Photo -->
-            <div class="md:w-2/5 mb-10 md:mb-0 md:mr-8 flex justify-start">
+            <div class="md:w-2/5 mb-10 md:mb-0 md:mr-8 flex justify-start security-icon">
                 <div class="relative">
                     <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-gray-600 bg-blue-600">
                         <div class="w-full h-full rounded-full border-4 border-white overflow-hidden">
@@ -442,7 +418,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4">Areas of <span class="text-blue-600">Expertise</span></h2>
-                <p class="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">Specialized knowledge in cloud security, infrastructure, and modern cybersecurity practices</p>
+                <p class="mt-4 text-xl text-gray-600 max-w-2xl mx-auto">Specialized knowledge in cloud security, infrastructure, and modern cybersecurity practices</p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -592,7 +568,7 @@
                     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-4xl font-bold mb-4">My <span class="text-blue-600">Services</span></h2>
-                    <p class="text-slate-600 max-w-2xl mx-auto">
+                    <p class="mt-4 text-xl text-gray-600 max-w-2xl mx-auto">
                         Comprehensive cybersecurity and cloud solutions tailored to protect your business and optimize your digital infrastructure.
                     </p>
                 </div>
@@ -767,377 +743,269 @@
                 </div>
             </div>
     </section>
-
-
-
+    
     <!-- Work Experience Section -->
-    <section id="experience" class="py-20 bg-white">
-        <div class="container mx-auto px-4">
+    <section id="experience" class="py-16 md:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4">Work <span class="text-blue-600">Experience</span></h2>
-                <p class="text-slate-600 max-w-2xl mx-auto">
-                    A decade of professional experience in cybersecurity and cloud infrastructure across various industries.
-                </p>
+                <p class="mt-4 text-xl text-gray-600 max-w-2xl mx-auto">Over a decade of hands-on experience securing enterprise environments and cloud infrastructure.</p>
             </div>
-            
-            <div class="timeline-container max-w-4xl mx-auto pl-12 md:pl-16">
+            <div class="timeline-container max-w-5xl mx-auto pl-12 md:pl-16">
                 <!-- Experience 1 -->
-                <div class="experience-card mb-12 relative">
+                <div class="experience-card mb-12 relative security-icon">
                     <div class="timeline-dot top-6"></div>
                     <div class="bg-white rounded-xl shadow-lg p-6 md:p-8 border border-slate-100">
                         <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
-                            <h3 class="text-xl font-bold text-blue-600">Senior Cloud Security Architect</h3>
+                            <h3 class="text-xl font-bold text-blue-600">Senior Cloud Engineer, TechOps</h3>
                             <div class="flex items-center mt-2 md:mt-0">
-                                <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded">2020 - Present</span>
+                                <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded">Jan 2025 - Present</span>
                             </div>
                         </div>
-                        <h4 class="text-lg font-semibold mb-4">Global Financial Services, Inc.</h4>
+                        <h4 class="text-lg font-semibold mb-4">Transcom Limited.</h4>
                         <p class="text-slate-700 mb-6">
-                            Lead a team of security engineers responsible for designing and implementing secure cloud infrastructure across AWS, Azure, and GCP environments for a Fortune 500 financial institution.
+                        Lead the design, implementation, and maintenance of scalable, highly available cloud solutions, ensuring optimized performance and security for critical business operations.
                         </p>
                         <ul class="space-y-2 text-slate-700">
                             <li class="flex items-start">
                                 <i class="fas fa-caret-right text-blue-600 mt-1.5 mr-2"></i>
-                                <span>Architected and implemented a zero-trust security model, reducing security incidents by 78%</span>
+                                <span>Lead the design, implementation, and maintenance of scalable, highly available cloud solutions.</span>
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-caret-right text-blue-600 mt-1.5 mr-2"></i>
-                                <span>Led cloud migration of critical financial applications with 99.99% uptime</span>
+                                <span>Optimize cloud resources for enhanced performance through continuous monitoring and evaluation.</span>
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-caret-right text-blue-600 mt-1.5 mr-2"></i>
-                                <span>Implemented DevSecOps practices, reducing deployment time by 65% while enhancing security</span>
+                                <span>Enhance cloud security and compliance by leading improvement efforts and implementing best practices.</span>
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-caret-right text-blue-600 mt-1.5 mr-2"></i>
-                                <span>Achieved and maintained compliance with PCI DSS, SOC 2, and GDPR requirements</span>
+                                <span>Evaluate and recommend new cloud technologies and tools to support business objectives.</span>
                             </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-caret-right text-blue-600 mt-1.5 mr-2"></i>
+                                <span>Collaborate with business units and application teams to understand requirements and develop solutions.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-caret-right text-blue-600 mt-1.5 mr-2"></i>
+                                <span>Mentor junior engineers, promoting knowledge-sharing and continuous learning.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-caret-right text-blue-600 mt-1.5 mr-2"></i>
+                                <span>Develop and maintain technical documentation, including architecture diagrams, deployment instructions, and standard operating procedures</span>
+                            </li> 
                         </ul>
                     </div>
                 </div>
-                
+
                 <!-- Experience 2 -->
-                <div class="experience-card mb-12 relative">
+                <div class="experience-card mb-12 relative security-icon">
                     <div class="timeline-dot top-6"></div>
                     <div class="bg-white rounded-xl shadow-lg p-6 md:p-8 border border-slate-100">
                         <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
-                            <h3 class="text-xl font-bold text-blue-600">Cloud Security Consultant</h3>
+                            <h3 class="text-xl font-bold text-blue-600">Senior Hybrid Cloud Engineer, ITOps</h3>
                             <div class="flex items-center mt-2 md:mt-0">
-                                <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded">2017 - 2020</span>
+                                <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded">Apr 2023 - Dec 2024</span>
                             </div>
                         </div>
-                        <h4 class="text-lg font-semibold mb-4">TechSecure Solutions</h4>
-                        <p class="text-slate-700 mb-6">
-                            Provided expert cloud security consulting services to enterprise clients across healthcare, finance, and retail sectors, focusing on secure cloud adoption and migration strategies.
-                        </p>
+                        <h4 class="text-lg font-semibold mb-4">Transcom Limited.</h4>
+                        <p class="text-slate-700 mb-6">Managed hybrid cloud infrastructure, ensuring secure, scalable, and cost-effective operations for enterprise IT environments.</p>
                         <ul class="space-y-2 text-slate-700">
                             <li class="flex items-start">
                                 <i class="fas fa-caret-right text-blue-600 mt-1.5 mr-2"></i>
-                                <span>Conducted over 50 cloud security assessments for Fortune 1000 companies</span>
+                                <span>Design, implement, and maintain secure, scalable, and cost-efficient hybrid cloud infrastructure.</span>
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-caret-right text-blue-600 mt-1.5 mr-2"></i>
-                                <span>Designed secure multi-cloud architectures for HIPAA-compliant healthcare systems</span>
+                                <span>Mentor junior engineers, promoting knowledge-sharing and continuous learning.</span>
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-caret-right text-blue-600 mt-1.5 mr-2"></i>
-                                <span>Developed cloud security frameworks adopted by 30+ enterprise clients</span>
+                                <span>Collaborate with stakeholders to understand requirements and develop solutions.</span>
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-caret-right text-blue-600 mt-1.5 mr-2"></i>
-                                <span>Led incident response for major security breaches, minimizing data exposure</span>
+                                <span>Deploy new services and applications to the cloud, ensuring successful integration and support.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-caret-right text-blue-600 mt-1.5 mr-2"></i>
+                                <span>Create and maintain technical documentation, including architecture diagrams and deployment instructions.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-caret-right text-blue-600 mt-1.5 mr-2"></i>
+                                <span>Implement monitoring, alerting, and incident response for hybrid cloud environments.</span>
                             </li>
                         </ul>
                     </div>
                 </div>
                 
                 <!-- Experience 3 -->
-                <div class="experience-card mb-12 relative">
+                <div class="experience-card mb-12 relative security-icon">
                     <div class="timeline-dot top-6"></div>
                     <div class="bg-white rounded-xl shadow-lg p-6 md:p-8 border border-slate-100">
                         <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
-                            <h3 class="text-xl font-bold text-blue-600">Cybersecurity Engineer</h3>
+                            <h3 class="text-xl font-bold text-blue-600">System Administrator, Infrastructure</h3>
                             <div class="flex items-center mt-2 md:mt-0">
-                                <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded">2014 - 2017</span>
+                                <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded">Apr 2019 - Mar 2023</span>
                             </div>
                         </div>
-                        <h4 class="text-lg font-semibold mb-4">SecureNet Technologies</h4>
+                        <h4 class="text-lg font-semibold mb-4">Transcom Limited.</h4>
                         <p class="text-slate-700 mb-6">
-                            Responsible for implementing and managing security solutions for on-premises and early cloud deployments, focusing on network security, identity management, and threat detection.
+                        Managed on-premises server and network infrastructure, focusing on security, reliability, and performance for enterprise systems.
                         </p>
                         <ul class="space-y-2 text-slate-700">
                             <li class="flex items-start">
                                 <i class="fas fa-caret-right text-blue-600 mt-1.5 mr-2"></i>
-                                <span>Implemented SIEM solutions reducing threat detection time from days to minutes</span>
+                                <span>Managed server and network security, including firewalls, VPNs, and access controls</span>
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-caret-right text-blue-600 mt-1.5 mr-2"></i>
-                                <span>Designed and deployed secure identity management systems for 10,000+ users</span>
+                                <span>Implemented system hardening and patch management to reduce security risks</span>
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-caret-right text-blue-600 mt-1.5 mr-2"></i>
-                                <span>Conducted regular penetration testing and vulnerability assessments</span>
+                                <span>Conducted regular security audits and vulnerability assessments</span>
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-caret-right text-blue-600 mt-1.5 mr-2"></i>
-                                <span>Led security awareness training programs for client organizations</span>
+                                <span>Managed data backup, recovery, and disaster recovery planning</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-caret-right text-blue-600 mt-1.5 mr-2"></i>
+                                <span>Developed and maintained technical documentation for system configurations and procedures</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-caret-right text-blue-600 mt-1.5 mr-2"></i>
+                                <span>Provided technical support and troubleshooting for critical system issues</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience 4 -->
+                <div class="experience-card mb-12 relative security-icon">
+                    <div class="timeline-dot top-6"></div>
+                    <div class="bg-white rounded-xl shadow-lg p-6 md:p-8 border border-slate-100">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold text-blue-600">Asst. System Administrator, Infrastructure</h3>
+                            <div class="flex items-center mt-2 md:mt-0">
+                                <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded">Jan 2017 - Mar 2019</span>
+                            </div>
+                        </div>
+                        <h4 class="text-lg font-semibold mb-4">Transcom Limited.</h4>
+                        <p class="text-slate-700 mb-6">
+                        Assisted in the administration and maintenance of IT systems, focusing on network security and infrastructure reliability.
+                        </p>
+                        <ul class="space-y-2 text-slate-700">
+                            <li class="flex items-start">
+                                <i class="fas fa-caret-right text-blue-600 mt-1.5 mr-2"></i>
+                                <span>Assisted in server and network administration, including patch management and system hardening.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-caret-right text-blue-600 mt-1.5 mr-2"></i>
+                                <span>Monitored network security and implemented access control measures.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-caret-right text-blue-600 mt-1.5 mr-2"></i>
+                                <span>Supported data backup, recovery, and disaster recovery planning.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-caret-right text-blue-600 mt-1.5 mr-2"></i>
+                                <span>Conducted routine hardware and software maintenance to ensure optimal performance.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-caret-right text-blue-600 mt-1.5 mr-2"></i>
+                                <span>Assisted in the configuration and deployment of new systems and services.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-caret-right text-blue-600 mt-1.5 mr-2"></i>
+                                <span>Provided technical support for user issues and escalated complex problems to senior engineers.</span>
                             </li>
                         </ul>
                     </div>
                 </div>
                 
-                <!-- Experience 4 -->
-                <div class="experience-card relative">
+                <!-- Experience 5 -->
+                <div class="experience-card mb-12 relative security-icon">
                     <div class="timeline-dot top-6"></div>
                     <div class="bg-white rounded-xl shadow-lg p-6 md:p-8 border border-slate-100">
                         <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
-                            <h3 class="text-xl font-bold text-blue-600">IT Security Analyst</h3>
+                            <h3 class="text-xl font-bold text-blue-600">Systems Engineer, Infrastructure</h3>
                             <div class="flex items-center mt-2 md:mt-0">
-                                <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded">2012 - 2014</span>
+                                <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded">Apr 2015 - Dec 2016</span>
                             </div>
                         </div>
-                        <h4 class="text-lg font-semibold mb-4">Global Retail Corporation</h4>
+                        <h4 class="text-lg font-semibold mb-4">Transcom Limited.</h4>
                         <p class="text-slate-700 mb-6">
-                            Monitored and maintained security systems for a large retail organization with 500+ locations, focusing on PCI DSS compliance and protecting customer data.
+                        Designed and managed IT infrastructure, focusing on security, scalability, and performance optimization for business-critical systems.
                         </p>
                         <ul class="space-y-2 text-slate-700">
                             <li class="flex items-start">
                                 <i class="fas fa-caret-right text-blue-600 mt-1.5 mr-2"></i>
-                                <span>Managed security operations for e-commerce platform processing 50,000+ daily transactions</span>
+                                <span>Designed and implemented secure, scalable IT infrastructure.</span>
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-caret-right text-blue-600 mt-1.5 mr-2"></i>
-                                <span>Implemented data loss prevention strategies across the organization</span>
+                                <span>Managed server and network security, including firewalls, VPNs, and intrusion detection systems.</span>
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-caret-right text-blue-600 mt-1.5 mr-2"></i>
-                                <span>Led PCI DSS compliance initiatives, achieving and maintaining Level 1 compliance</span>
+                                <span>Conducted system performance tuning and capacity planning.</span>
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-caret-right text-blue-600 mt-1.5 mr-2"></i>
-                                <span>Responded to and mitigated security incidents with minimal business impact</span>
+                                <span>Developed technical documentation and provided user training.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-caret-right text-blue-600 mt-1.5 mr-2"></i>
+                                <span>Implemented disaster recovery plans and backup solutions.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-caret-right text-blue-600 mt-1.5 mr-2"></i>
+                                <span>Monitored system health and resolved performance issues.</span>
                             </li>
                         </ul>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-
-    <!-- Work Experience Section -->
-    <section id="experience" class="py-16 md:py-24 bg-gray-50"
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Work <span class="text-blue-600">Experience</span></h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Over a decade of hands-on experience securing enterprise environments and cloud infrastructure.</p>
-            </div>
-            
-            <div class="max-w-4xl mx-auto">
-                <div class="relative">
-                    <!-- Timeline Line -->
-                    <div class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 h-full w-1 bg-indigo-200"></div>
-                    
-                    <!-- Experience Item 1 -->
-                    <div class="relative mb-16">
-                        <div class="flex flex-col md:flex-row items-center">
-                            <div class="md:w-1/2 md:pr-12 md:text-right mb-8 md:mb-0">
-                                <h3 class="text-xl font-semibold text-gray-800">Senior Cloud Engineer, TechOps</h3>
-                                <p class="text-indigo-600 font-medium">Transcom Limited.</p>
-                                <p class="text-gray-500">Jan 2025 - Present</p>
-                            </div>
-                            
-                            <div class="absolute left-0 md:left-1/2 transform -translate-y-1/2 md:-translate-x-1/2 bg-indigo-600 border-4 border-white rounded-full w-6 h-6 z-10"></div>
-                            
-                            <div class="md:w-1/2 md:pl-12">
-                                <ul class="text-gray-600 space-y-2">
-                                    <li class="flex items-start">
-                                        <i class="fas fa-angle-right text-indigo-600 mt-1 mr-2"></i>
-                                        <span>Led the design, implementation, and optimization of scalable, secure cloud infrastructures.</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <i class="fas fa-angle-right text-indigo-600 mt-1 mr-2"></i>
-                                        <span>Managed and enhanced cloud security frameworks, ensuring compliance with industry standards.</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <i class="fas fa-angle-right text-indigo-600 mt-1 mr-2"></i>
-                                        <span>Implemented cloud cost management strategies and optimized resource utilization.</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <i class="fas fa-angle-right text-indigo-600 mt-1 mr-2"></i>
-                                        <span>Provided mentorship to junior engineers and collaborated with cross-functional teams to accelerate cloud adoption.</span>
-                                    </li>                                    
-                                </ul>
+                <!-- Experience 6 -->
+                <div class="experience-card mb-12 relative security-icon">
+                    <div class="timeline-dot top-6"></div>
+                    <div class="bg-white rounded-xl shadow-lg p-6 md:p-8 border border-slate-100">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold text-blue-600">System Support Engineer, Technical</h3>
+                            <div class="flex items-center mt-2 md:mt-0">
+                                <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded">Jan 2013 - Mar 2015</span>
                             </div>
                         </div>
+                        <h4 class="text-lg font-semibold mb-4">AKIJ Online Ltd.</h4>
+                        <p class="text-slate-700 mb-6">
+                        Provided frontline technical support for IT systems, ensuring reliable infrastructure and minimal downtime for enterprise operations.
+                        </p>
+                        <ul class="space-y-2 text-slate-700">
+                            <li class="flex items-start">
+                                <i class="fas fa-caret-right text-blue-600 mt-1.5 mr-2"></i>
+                                <span>Provided technical support for server and network-related issues.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-caret-right text-blue-600 mt-1.5 mr-2"></i>
+                                <span>Assisted in the installation, configuration, and maintenance of IT systems and infrastructure.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-caret-right text-blue-600 mt-1.5 mr-2"></i>
+                                <span>Troubleshot hardware, software, and network problems to ensure system uptime.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-caret-right text-blue-600 mt-1.5 mr-2"></i>
+                                <span>Documented and resolved technical issues, ensuring minimal system downtime.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-caret-right text-blue-600 mt-1.5 mr-2"></i>
+                                <span>Monitored system health and resolved performance issues.</span>
+                            </li>
+                        </ul>
                     </div>
-                    
-                    <!-- Experience Item 2 -->
-                    <div class="relative mb-16">
-                        <div class="flex flex-col md:flex-row items-center">
-                            <div class="md:w-1/2 md:pr-12 md:text-right mb-8 md:mb-0 md:order-1">
-                                <ul class="text-gray-600 space-y-2">
-                                    <li class="flex items-start md:justify-end">
-                                        <span class="md:order-2">Led the design, implementation, and management of secure hybrid cloud infrastructure.</span>
-                                        <i class="fas fa-angle-right text-indigo-600 mt-1 mr-2 md:hidden"></i>
-                                        <i class="fas fa-angle-left text-indigo-600 mt-1 ml-2 hidden md:block"></i>
-                                    </li>
-                                    <li class="flex items-start md:justify-end">
-                                        <span class="md:order-2">Optimized cloud resources across private and public clouds for performance, scalability, and cost-efficiency.</span>
-                                        <i class="fas fa-angle-right text-indigo-600 mt-1 mr-2 md:hidden"></i>
-                                        <i class="fas fa-angle-left text-indigo-600 mt-1 ml-2 hidden md:block"></i>
-                                    </li>
-                                    <li class="flex items-start md:justify-end">
-                                        <span class="md:order-2">Implemented cloud security best practices, including identity and access management (IAM) and compliance controls.</span>
-                                        <i class="fas fa-angle-right text-indigo-600 mt-1 mr-2 md:hidden"></i>
-                                        <i class="fas fa-angle-left text-indigo-600 mt-1 ml-2 hidden md:block"></i>
-                                    </li>
-
-                                    <li class="flex items-start md:justify-end">
-                                        <span class="md:order-2">Collaborated with stakeholders to define cloud migration strategies and ensure seamless application integration.</span>
-                                        <i class="fas fa-angle-right text-indigo-600 mt-1 mr-2 md:hidden"></i>
-                                        <i class="fas fa-angle-left text-indigo-600 mt-1 ml-2 hidden md:block"></i>
-                                    </li>
-                                </ul>
-                            </div>
-                            
-                            <div class="absolute left-0 md:left-1/2 transform -translate-y-1/2 md:-translate-x-1/2 bg-indigo-600 border-4 border-white rounded-full w-6 h-6 z-10"></div>
-                            
-                            <div class="md:w-1/2 md:pl-12 md:order-2">
-                                <h3 class="text-xl font-semibold text-gray-800">Senior Hybrid Cloud Engineer, ITOps</h3>
-                                <p class="text-indigo-600 font-medium">Transcom Limited.</p>
-                                <p class="text-gray-500">Apr 2023 - Dec 2024</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Experience Item 3 -->
-                    <div class="relative mb-16">
-                        <div class="flex flex-col md:flex-row items-center">
-                            <div class="md:w-1/2 md:pr-12 md:text-right mb-8 md:mb-0">
-                                <h3 class="text-xl font-semibold text-gray-800"></h3>
-                                   <h3 class="text-xl font-semibold text-gray-800">Systems Administrator, INF</h3>
-                                <p class="text-indigo-600 font-medium">Transcom Limited.</p>
-                                <p class="text-gray-500">Jan 2019 - Apr 2023</p>
-                            </div>
-                            
-                            <div class="absolute left-0 md:left-1/2 transform -translate-y-1/2 md:-translate-x-1/2 bg-indigo-600 border-4 border-white rounded-full w-6 h-6 z-10"></div>
-                            
-                            <div class="md:w-1/2 md:pl-12">
-                                <ul class="text-gray-600 space-y-2">
-                                    <li class="flex items-start">
-                                        <i class="fas fa-angle-right text-indigo-600 mt-1 mr-2"></i>
-                                        <span>Managed server and network security, including firewalls, VPNs, and access controls.</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <i class="fas fa-angle-right text-indigo-600 mt-1 mr-2"></i>
-                                        <span>Implemented system hardening and patch management to reduce security risks.</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <i class="fas fa-angle-right text-indigo-600 mt-1 mr-2"></i>
-                                        <span>Conducted regular security audits and vulnerability assessments.</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                     <!-- Experience Item 4 -->
-                     <div class="relative mb-16">
-                        <div class="flex flex-col md:flex-row items-center">
-                            <div class="md:w-1/2 md:pr-12 md:text-right mb-8 md:mb-0 md:order-1">
-                                <ul class="text-gray-600 space-y-2">
-                                    <li class="flex items-start md:justify-end">
-                                        <span class="md:order-2">Assisted in server and network administration, including patch management and system hardening.</span>
-                                        <i class="fas fa-angle-right text-indigo-600 mt-1 mr-2 md:hidden"></i>
-                                        <i class="fas fa-angle-left text-indigo-600 mt-1 ml-2 hidden md:block"></i>
-                                    </li>
-                                    <li class="flex items-start md:justify-end">
-                                        <span class="md:order-2">Monitored network security and implemented access control measures.</span>
-                                        <i class="fas fa-angle-right text-indigo-600 mt-1 mr-2 md:hidden"></i>
-                                        <i class="fas fa-angle-left text-indigo-600 mt-1 ml-2 hidden md:block"></i>
-                                    </li>
-                                    <li class="flex items-start md:justify-end">
-                                        <span class="md:order-2">Conducted routine hardware and software maintenance to ensure optimal performance.</span>
-                                        <i class="fas fa-angle-right text-indigo-600 mt-1 mr-2 md:hidden"></i>
-                                        <i class="fas fa-angle-left text-indigo-600 mt-1 ml-2 hidden md:block"></i>
-                                    </li>
-                                </ul>
-                            </div>
-                            
-                            <div class="absolute left-0 md:left-1/2 transform -translate-y-1/2 md:-translate-x-1/2 bg-indigo-600 border-4 border-white rounded-full w-6 h-6 z-10"></div>
-                            
-                            <div class="md:w-1/2 md:pl-12 md:order-2">
-                                <h3 class="text-xl font-semibold text-gray-800">Asst. System Administrator, INF</h3>
-                                <p class="text-indigo-600 font-medium">Transcom Limited.</p>
-                                <p class="text-gray-500">Jan 2015 - Dec 2018</p>
-                            </div>
-                        </div>
-                    </div>    
-
-                     <!-- Experience Item 5 -->
-                     <div class="relative mb-16">
-                        <div class="flex flex-col md:flex-row items-center">
-                            <div class="md:w-1/2 md:pr-12 md:text-right mb-8 md:mb-0">
-                                <h3 class="text-xl font-semibold text-gray-800"></h3>
-                                   <h3 class="text-xl font-semibold text-gray-800">Systems Engineer, INF</h3>
-                                <p class="text-indigo-600 font-medium">Transcom Limited.</p>
-                                <p class="text-gray-500">Jun 2011 - Dec 2014</p>
-                            </div>
-                            
-                            <div class="absolute left-0 md:left-1/2 transform -translate-y-1/2 md:-translate-x-1/2 bg-indigo-600 border-4 border-white rounded-full w-6 h-6 z-10"></div>
-                            
-                            <div class="md:w-1/2 md:pl-12">
-                                <ul class="text-gray-600 space-y-2">
-                                    <li class="flex items-start">
-                                        <i class="fas fa-angle-right text-indigo-600 mt-1 mr-2"></i>
-                                        <span>Designed and implemented secure, scalable IT infrastructure.</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <i class="fas fa-angle-right text-indigo-600 mt-1 mr-2"></i>
-                                        <span>Managed server and network security, including firewalls, VPNs, and intrusion detection systems.</span>
-                                    </li>
-                                    <li class="flex items-start">
-                                        <i class="fas fa-angle-right text-indigo-600 mt-1 mr-2"></i>
-                                        <span>Conducted system performance tuning and capacity planning.</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>      
-                     <!-- Experience Item 4 -->
-                     <div class="relative mb-16">
-                        <div class="flex flex-col md:flex-row items-center">
-                            <div class="md:w-1/2 md:pr-12 md:text-right mb-8 md:mb-0 md:order-1">
-                                <ul class="text-gray-600 space-y-2">
-                                    <li class="flex items-start md:justify-end">
-                                        <span class="md:order-2">Provided technical support for server and network-related issues.</span>
-                                        <i class="fas fa-angle-right text-indigo-600 mt-1 mr-2 md:hidden"></i>
-                                        <i class="fas fa-angle-left text-indigo-600 mt-1 ml-2 hidden md:block"></i>
-                                    </li>
-                                    <li class="flex items-start md:justify-end">
-                                        <span class="md:order-2">Assisted in the installation, configuration, and maintenance of IT systems and infrastructure.</span>
-                                        <i class="fas fa-angle-right text-indigo-600 mt-1 mr-2 md:hidden"></i>
-                                        <i class="fas fa-angle-left text-indigo-600 mt-1 ml-2 hidden md:block"></i>
-                                    </li>
-                                    <li class="flex items-start md:justify-end">
-                                        <span class="md:order-2">Troubleshot hardware, software, and network problems to ensure system uptime.</span>
-                                        <i class="fas fa-angle-right text-indigo-600 mt-1 mr-2 md:hidden"></i>
-                                        <i class="fas fa-angle-left text-indigo-600 mt-1 ml-2 hidden md:block"></i>
-                                    </li>
-                                </ul>
-                            </div>
-                            
-                            <div class="absolute left-0 md:left-1/2 transform -translate-y-1/2 md:-translate-x-1/2 bg-indigo-600 border-4 border-white rounded-full w-6 h-6 z-10"></div>
-                            
-                            <div class="md:w-1/2 md:pl-12 md:order-2">
-                                <h3 class="text-xl font-semibold text-gray-800">System Support Engineer, Technical</h3>
-                                <p class="text-indigo-600 font-medium">AKIJ Online Ltd..</p>
-                                <p class="text-gray-500">Jan 2011 - May 2011</p>
-                            </div>
-                        </div>
-                    </div> 
-
                 </div>
             </div>
         </div>
@@ -1148,7 +1016,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
             <h2 class="text-3xl md:text-4xl font-bold mb-4">Licenses & <span class="text-blue-600">Certifications</span></h2>
-            <p class="text-slate-600 max-w-2xl mx-auto">
+            <p class="mt-4 text-xl text-gray-600 max-w-2xl mx-auto">
                 Industry-recognized credentials validating expertise in cloud technologies and cybersecurity.
             </p>
         </div>
@@ -1428,7 +1296,7 @@
 
                 
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Featured <span class="text-blue-600">Projects</span></h2>
-                <p class="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">Selected work showcasing my expertise in cloud and cybersecurity</p>
+                <p class="mt-4 text-xl text-gray-600 max-w-2xl mx-auto">Selected work showcasing my expertise in cloud and cybersecurity</p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -1438,7 +1306,7 @@
                         <i class="fas fa-fingerprint text-white text-4xl security-icon"></i>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Zero Trust Security Framework Implementation</h3>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Zero Trust Security Framework</h3>
                         <p class="text-gray-600 mb-4">Designed and implemented a comprehensive Zero Trust security framework using Microsoft Defender XDR and Sentinel, reducing security incidents and improving threat detection.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Zero Trust</span>
@@ -1454,7 +1322,7 @@
                             <ul class="text-gray-600 space-y-2">
                                 <li class="flex items-start">
                                     <i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
-                                    <span>Identity-based access controls across cloud and on-premise resources</span>
+                                    <span>Identity-based access controls across cloud and on-premise</span>
                                 </li>
                                 <li class="flex items-start">
                                     <i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
@@ -1475,7 +1343,7 @@
                         <i class="fas fa-envelope-circle-check text-white text-4xl security-icon"></i>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Legacy Email Migration to Exchange Online</h3>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Migration to Exchange Online</h3>
                         <p class="text-gray-600 mb-4">Migrated legacy on-premise email systems to Exchange Online for enhanced reliability, security, and scalability, improving communication efficiency across the organization.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Email Migration</span>
@@ -1513,7 +1381,7 @@
                         <i class="fas fa-shield-alt text-white text-4xl security-icon"></i>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Security Operations Center (SOC) Implementation</h3>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Security Operations Center (SOC)</h3>
                         <p class="text-gray-600 mb-4">Implemented a comprehensive Security Operations Center (SOC) to provide real-time threat detection, incident response, and continuous monitoring for enhanced cybersecurity posture.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">SIEM</span>
@@ -1548,10 +1416,10 @@
                 <!-- Project 4 -->
                 <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md card-hover">
                     <div class="h-20 bg-blue-600 flex items-center justify-center gradient-bg">
-                        <i class="fas fa-user-plus text-white text-4xl security-icon"></i>
+                        <i class="fas fa-key text-white text-4xl security-icon"></i>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Hybrid Active Directory (AD) Deployment</h3>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Hybrid Active Directory (AD)</h3>
                         <p class="text-gray-600 mb-4">Deployed a hybrid AD environment to integrate on-premises and cloud identity management, enhancing security and simplifying user access management.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Hybrid AD</span>
@@ -1589,7 +1457,7 @@
                         <i class="fas fa-screwdriver-wrench text-white text-4xl security-icon"></i>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Microsoft Endpoint Manager (MEM) Deployment</h3>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Microsoft Endpoint Manager (MEM)</h3>
                         <p class="text-gray-600 mb-4">Implemented Microsoft Endpoint Manager (MEM) to manage and secure devices across different platforms, including Windows, Linux, macOS, Android, and iOS.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Intune</span>
@@ -1620,20 +1488,19 @@
                         </div>
                     </div>
                 </div>
-
+                
                 <!-- Project 6 -->
                 <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md card-hover">
                     <div class="h-20 bg-blue-600 flex items-center justify-center gradient-bg">
-                        <i class="fas fa-envelopes-bulk text-white text-4xl security-icon"></i>
+                        <i class="fas fa-bug text-white text-4xl security-icon"></i>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Implementation of Azure Communication Service</h3>
-                        <p class="text-gray-600 mb-4">Designed and implemented a scalable bulk email solution using Azure Communication Services, ensuring high deliverability and secure communication for business-critical notifications.</p>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Vulnerability Assessment</h3>
+                        <p class="text-gray-600 mb-4">Conducted a thorough vulnerability assessment on datacenter servers and cloud resources. Enhanced security posture and minimized attack surfaces. Ensured compliance with industry standards.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Bulk Email</span>
-                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Messaging Solutions</span>
-                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Secure</span>
-                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Cloud Solutions</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Vulnerability Assessment</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Risk Management</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Attack Surface Reduction</span>
                         </div>
                         <button class="text-blue-600 hover:text-blue-800 font-medium flex items-center" onclick="toggleProjectDetails('project6')">
                             <span>View Details</span>
@@ -1643,15 +1510,15 @@
                             <ul class="text-gray-600 space-y-2">
                                 <li class="flex items-start">
                                     <i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
-                                    <span>Integrated with existing applications for automated notifications</span>
+                                    <span>Detailed vulnerability scanning and risk assessment</span>
                                 </li>
                                 <li class="flex items-start">
                                     <i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
-                                    <span>Enhanced message tracking and analytics</span>
+                                    <span>Identification and remediation of high-risk vulnerabilities</span>
                                 </li>
                                 <li class="flex items-start">
                                     <i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i>
-                                    <span>Scalable architecture to handle large volumes</span>
+                                    <span>Improved overall security posture and reduced attack surface</span>
                                 </li>
                             </ul>
                         </div>
@@ -1666,7 +1533,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">                    
                     <h2 class="text-3xl md:text-4xl font-bold mb-4">Client <span class="text-blue-600">Testimonials</span></h2>
-                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">What clients say about working with me on their security challenges.</p>
+                    <p class="mt-4 text-xl text-gray-600 max-w-2xl mx-auto">What clients say about working with me on their security challenges.</p>
                 </div>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -1744,7 +1611,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Get in <span class="text-blue-600">Touch</span></h2>
-                <p class="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">Interested in working together? Let's discuss how I can help secure your organization.</p>
+                <p class="mt-4 text-xl text-gray-600 max-w-2xl mx-auto">Interested in working together? Let's discuss how I can help secure your organization.</p>
             </div>
             
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -1847,13 +1714,14 @@
                 <div>
                     <a href="#home" class="flex items-center mb-4">
                         <div class="h-12 w-12 rounded-full flex items-center justify-center mr-2 overflow-hidden">
-                            <img src="/Logo-cg.svg" alt="AH Gazi" class="h-full w-full object-contain" />
+                            <img src="/Logo-ns.svg" alt="AH Gazi" class="h-full w-full object-contain" />
                         </div>
                         <span class="text-xl font-bold text-white">AH Gazi</span>
                     </a>
 
-                    <p class="text-gray-400 mb-4">Multi-Cloud & Cybersecurity Expert.</p>
-                    <p class="text-gray-400">Protecting your digital growth with scalable cloud infrastructure and cutting-edge security.</p>
+                    <p class="text-gray-400 mb-4">Multi-cloud and Security Specialist.</p>
+                    <p class="text-gray-400">
+                    Certified cloud and security architect specializing in multi-cloud solutions, SOC management, DevOps automation, and IT infrastructure optimization.</p>
                 </div>
                 <div>
                     <h3 class="text-lg font-bold mb-4">Quick Links</h3>
